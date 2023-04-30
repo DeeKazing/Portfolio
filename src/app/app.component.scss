@@ -1,0 +1,64 @@
+@use "../styles.scss";
+
+.title {
+  position: absolute;
+  color: styles.$color-blue;
+  font-size: 4rem;
+  line-height: 1;
+}
+.glass {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rem;
+}
+
+.glass .layer {
+  position: relative;
+  width: 30px;
+  height: 100%;
+  margin: 1px;
+  box-shadow: 0 5px 25 rgba(styles.$color-black, 0.15);
+  backdrop-filter: blur(30px);
+}
+
+.glass .layer:nth-child(8n+1){
+    backdrop-filter: blur(10px);
+}
+.glass .layer:nth-child(8n+2){
+    backdrop-filter: blur(50px);
+}
+.glass .layer:nth-child(8n+3){
+    backdrop-filter: blur(30px);
+}
+.glass .layer:nth-child(8n+4){
+    backdrop-filter: blur(20px);
+}
+.glass .layer:nth-child(8n+5){
+    backdrop-filter: blur(40px);
+}
+.glass .layer:nth-child(8n+6){
+    backdrop-filter: blur(30px);
+}
+.glass .layer:nth-child(8n+7){
+    backdrop-filter: blur(60px);
+}
+.glass .layer:nth-child(8n+8){
+    backdrop-filter: blur(20px);
+}
+
+// header {
+//   height: 70%;
+//   background-color: styles.$color-black;
+// }
+
+// section {
+//   height: 70%;
+//   border-radius: 8px;
+//   background-color: styles.$color-gray;
+// }
+
+// .cards {
+//   background-color: styles.$color-gray;
+// }

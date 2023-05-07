@@ -1,0 +1,23 @@
+<svg width="100%" height="100%" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="drop-gradient">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect fill="#2B2B2B" width="100%" height="100%"/>
+    <g id="rain">
+      <circle class="drop" cx="10" cy="10" r="4" fill="url(#drop-gradient)">
+        <animate attributeName="cy" dur="1s" values="10;500" repeatCount="indefinite"/>
+        <animate attributeName="cx" dur="1s" values="10;20" repeatCount="indefinite"/>
+      </circle>
+      <circle class="drop" cx="30" cy="10" r="4" fill="url(#drop-gradient)">
+        <animate attributeName="cy" dur="1s" values="10;500" repeatCount="indefinite"/>
+        <animate attributeName="cx" dur="1s" values="30;40" repeatCount="indefinite"/>
+      </circle>
+      <!-- add more circles here to create more raindrops -->
+    </g>
+  </g>
+</svg>

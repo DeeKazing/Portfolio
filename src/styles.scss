@@ -1,21 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 $color-black: #222831;
-$color-gray: #393E46;
-$color-blue: #00ADB5;
-$color-white: #EEEEEE;
+$color-gray: #393e46;
+$color-blue: #00adb5;
+$color-white: #eeeeee;
 
 * {
-    box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
-    
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: $color-black;
-    color: $color-white;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: $color-black;
+  color: $color-white;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-moz-scrollbar {
+  width: 0px;
 }

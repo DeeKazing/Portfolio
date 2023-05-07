@@ -1,26 +1,21 @@
 <span>
-  <header>
-    <h1 class="title">Hi,<br>
-      I'm Feri,<br>
-      web developer<br>
+  <app-navigation></app-navigation>
+  <header id="entry">
+    <h1 class="title">
+      Hi,<br />
+      I'm Feri,<br />
+      software developer<br />
     </h1>
     <div class="glass">
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
+      <span
+        *ngFor="let drop of drops"
+        class="drop"
+        [style.left]="drop.left"
+        [style.animation-duration]="drop.duration"
+      ></span>
+      <span *ngFor="let layer of layers" class="layer"></span>
     </div>
   </header>
-  <section></section
-></span>
+
+  <section id="end"><h1>MOIIIIIIIIN</h1></section></span
+>

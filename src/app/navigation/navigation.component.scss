@@ -3,25 +3,31 @@
 .navigation {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
-  width: 45px;
-  background-color: styles.$color-black;
+  width: 4%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   margin: 0;
-  padding: 10px 10px;
-  list-style: none;
+  padding: 10px;
+  gap: 6px;
 }
 
 nav li {
-  display: inline-block;
   margin: 0;
   padding: 0;
 }
@@ -29,14 +35,14 @@ nav li {
 nav li img {
   margin: 3px;
   display: block;
-  height: 32px;
+  height: auto;
+  min-width: 25px;
+  max-width: 50px;
 }
 
 .navigation img:hover {
-  transform: scale(
-    1.2
-  );
-    transition: transform 0.2s ease-in-out; 
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 
 .navigation img:hover::before {
@@ -48,14 +54,4 @@ nav li img {
   left: -5px;
   border-radius: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-}
-
-#first {
-  margin-top: 0;
-  margin-bottom: auto;
-}
-
-#last {
-  margin-top: auto;
-  margin-bottom: 0;
 }

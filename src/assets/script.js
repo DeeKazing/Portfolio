@@ -59,13 +59,13 @@ let config = {
     SIM_RESOLUTION: 256,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 1,
+    DENSITY_DISSIPATION: 0.5,
     VELOCITY_DISSIPATION: 0,
-    PRESSURE: 0.16,
-    PRESSURE_ITERATIONS: 20,
+    PRESSURE: 0,
+    PRESSURE_ITERATIONS: 30,
     CURL: 0,
-    SPLAT_RADIUS: 0.1,
-    SPLAT_FORCE: 6000,
+    SPLAT_RADIUS: 0.01,
+    SPLAT_FORCE: 12000,
     SHADING: true,
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
@@ -75,12 +75,12 @@ let config = {
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.01,
-    BLOOM_THRESHOLD: 0.5,
+    BLOOM_INTENSITY: 0.1,
+    BLOOM_THRESHOLD: 1,
     BLOOM_SOFT_KNEE: 0.7,
     SUNRAYS: true,
     SUNRAYS_RESOLUTION: 196,
-    SUNRAYS_WEIGHT: 0.5,
+    SUNRAYS_WEIGHT: 1,
 }
 
 function pointerPrototype () {
@@ -1469,13 +1469,14 @@ canvas.addEventListener('mousedown', e => {
     updatePointerDownData(pointer, -1, posX, posY);
 });
 
-canvas.addEventListener('mousemove', e => {
+    canvas.addEventListener('mousemove', e => {
     let pointer = pointers[0];
     // if (!pointer.down) return;
     let posX = scaleByPixelRatio(e.offsetX);
     let posY = scaleByPixelRatio(e.offsetY);
     updatePointerMoveData(pointer, posX, posY);
 });
+
 
 window.addEventListener('mouseup', () => {
     updatePointerUpData(pointers[0]);

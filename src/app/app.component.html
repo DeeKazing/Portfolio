@@ -1,20 +1,8 @@
-<span>
-  <app-navigation></app-navigation>
-  <header id="entry">
-    <h1 class="title">
-      Hi,<br />
-      I'm Feri,<br />
-      software developer<br />
-    </h1>
-    <div class="glass">
-      <span
-        *ngFor="let drop of drops"
-        class="drop"
-        [style.left]="drop.left"
-        [style.animation-duration]="drop.duration"
-      ></span>
-      <span *ngFor="let layer of layers" class="layer"></span>
-    </div>
-  </header>
-  <section id="end" style="height: 1000px"><h1>MOIIIIIIIIN</h1></section></span
->
+<!-- <div class="loadingBackground" *ngIf="isLoading">
+  <div class="ring">
+    Loading
+    <span></span>
+  </div>
+</div> -->
+<app-navigation></app-navigation>
+<router-outlet></router-outlet>

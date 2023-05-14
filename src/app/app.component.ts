@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +8,29 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Portfolio';
 
-  drops: { left: string; duration: string }[] = [];
-  layers: any[] = [];
-  ngOnInit(): void {
-    for (let i = 0; i < 60; i++) {
-      this.layers.push({});
-    }
-    // Generate random drops
-    for (let i = 0; i < 100; i++) {
-      this.drops.push({
-        left: Math.floor(Math.random() * window.innerWidth) + 'px',
-        duration: (Math.random() * 2 + 1).toFixed(1) + 's',
-      });
-    }
+  isLoading: boolean = true;
+
+  ngAfterViewInit(): void {
+    const self = this;
+    const container = document.querySelector('.container');
+  
+    // Führe den Fade-In-Effekt nach 2 Sekunden aus, wenn isLoading auf false gesetzt wurde
+    setTimeout(() => {
+      self.isLoading = false;
+      if (!self.isLoading) {
+        container!.classList.add('fade-in');
+      }
+    }, 500);
+  
+    const canvas = document.querySelector('canvas');
+    const section = document.querySelector('body');
+  
+    // Leite das Mousemove-Event an das Canvas weiter, wenn isLoading false ist
+    section!.addEventListener('mousemove', function (event) {
+      if (!self.isLoading && event.target !== canvas) {
+        event.stopPropagation();
+        canvas!.dispatchEvent(new MouseEvent('mousemove', event));
+      }
+    });
   }
 }

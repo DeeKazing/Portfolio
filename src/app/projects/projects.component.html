@@ -1,48 +1,74 @@
 <div class="portfolio">
-  <h1>My projects to date</h1>
+  <button (click)="toggleLanguage()" class="translate-button">
+    {{ currentLanguage === "de" ? "EN" : "DE" }}
+  </button>
+  <h1>
+    {{
+      currentLanguage === "de"
+        ? "Meine bisherigen Projekte"
+        : "My projects to date"
+    }}
+  </h1>
   <div class="projects">
-    <div class="project">
-      <img src="../../assets/NFTsmall.png" alt="Project 1" />
+    <div class="project smaydo">
+      <img src="../../assets/smaydo.png" alt="Smaydo" />
       <div href="#" class="project-details">
-        <h2>Advanced Studios</h2>
+        <h2>{{ currentLanguage === "de" ? "Smaydo" : "Smaydo" }}</h2>
         <p>
-          Developing an NFT website in the frontend has been an exhilarating
-          journey, involving learning blockchain technology, implementing smart
-          contracts, and integrating wallets and NFT marketplaces. It has
-          allowed me to showcase unique digital assets and participate in the
-          emerging NFT market while focusing on security, user-friendliness, and
-          seamless crypto payment integration.
+          {{
+            currentLanguage === "de"
+              ? "Die Erstellung eines Webshops für ein Unternehmen für Computerhardware mit WordPress war eine lohnende Erfahrung. Es ermöglichte mir, die Flexibilität und die umfangreiche Plugin-Umgebung von WordPress zu nutzen, um einen benutzerfreundlichen und funktionsreichen Online-Shop zu gestalten, der den spezifischen Anforderungen der Computerhardware-Branche gerecht wird."
+              : "Creating a webshop for a computer hardware business using WordPress was a rewarding experience. It allowed me to leverage the flexibility and extensive plugin ecosystem of WordPress to design a user-friendly and feature-rich online store, catering to the specific needs of the computer hardware industry."
+          }}
         </p>
-        <a href="#">View Project</a>
+        <a href="#">{{
+          currentLanguage === "de" ? "Projekt anzeigen" : "View Project"
+        }}</a>
+      </div>
+    </div>
+    <div class="project">
+      <img src="../../assets/NFTsmall.png" alt="Advanced Studios" />
+      <div href="#" class="project-details">
+        <h2>
+          {{
+            currentLanguage === "de" ? "Advanced Studios" : "Advanced Studios"
+          }}
+        </h2>
+        <p>
+          {{
+            currentLanguage === "de"
+              ? "Die Entwicklung einer NFT-Website im Frontend war eine aufregende Reise, die das Erlernen von Blockchain-Technologie, die Implementierung von Smart Contracts und die Integration von Wallets und NFT-Marktplätzen umfasste. Es ermöglichte mir, einzigartige digitale Assets zu präsentieren und am aufstrebenden NFT-Markt teilzunehmen, während ich mich auf Sicherheit, Benutzerfreundlichkeit und nahtlose Integration von Kryptozahlungen konzentrierte."
+              : "Developing an NFT website in the frontend has been an exhilarating journey, involving learning blockchain technology, implementing smart contracts, and integrating wallets and NFT marketplaces. It has allowed me to showcase unique digital assets and participate in the emerging NFT market while focusing on security, user-friendliness, and seamless crypto payment integration."
+          }}
+        </p>
+        <a href="#">{{
+          currentLanguage === "de" ? "Projekt anzeigen" : "View Project"
+        }}</a>
       </div>
     </div>
     <div class="project smaydo">
-      <img src="../../assets/smaydo.png" alt="Project 2" />
-      <div href="#" class="project-details">
-        <h2>Smaydo</h2>
-        <p>
-          Creating a webshop for a computer hardware business using WordPress
-          was a rewarding experience. It allowed me to leverage the flexibility
-          and extensive plugin ecosystem of WordPress to design a user-friendly
-          and feature-rich online store, catering to the specific needs of the
-          computer hardware industry.
-        </p>
-        <a href="#">View Project</a>
-      </div>
-    </div>
-    <div class="project">
-      <img src="project3.jpg" alt="Project 3" />
+      <img
+        src="../../assets/ablationProfile.png"
+        alt="Planner for Eye Surgery"
+      />
       <div class="project-details">
-        <h2>Planner for Eye Surgery</h2>
+        <h2>
+          {{
+            currentLanguage === "de"
+              ? "Planner für Augenoperationen"
+              : "Planner for Eye Surgery"
+          }}
+        </h2>
         <p>
-          Developing an eye surgery scheduler using Angular for a well-known
-          company was an exciting and rewarding endeavor. While there were some
-          challenges, the process of seamlessly processing and storing
-          parameters and developing a comprehensive planning tool tailored to
-          the complicated needs of eye surgery was both intellectually
-          stimulating and personally satisfying.
+          {{
+            currentLanguage === "de"
+              ? "Die Entwicklung eines Terminplaners für Augenoperationen mit Angular für ein bekanntes Unternehmen war ein aufregendes und lohnendes Unterfangen. Der Prozess der nahtlosen Verarbeitung und Speicherung von Parametern und die Entwicklung eines umfassenden Planungstools, das den komplizierten Anforderungen der Augenchirurgie zugeschnitten ist, war intellektuell anregend und persönlich befriedigend."
+              : "Developing a scheduler for eye surgery using Angular for a well-known company was an exhilarating and rewarding endeavor. The process of seamlessly processing and storing parameters and developing a comprehensive planning tool tailored to the complicated needs of eye surgery was intellectually stimulating and personally satisfying."
+          }}
         </p>
-        <a href="#">View Project</a>
+        <a href="#">{{
+          currentLanguage === "de" ? "Projekt anzeigen" : "View Project"
+        }}</a>
       </div>
     </div>
   </div>

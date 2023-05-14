@@ -7,6 +7,7 @@
   backdrop-filter: blur(8px);
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
   overflow: auto; /* Scrollbar anzeigen, wenn Inhalt überläuft */
+  border-radius: 16px;
 }
 
 .portfolio h1 {
@@ -22,7 +23,9 @@
 
 .project {
   flex-grow: 1;
-  flex-basis: calc(33.33% - 20px); /* Hier den gewünschten Abstand zwischen den Projekten anpassen */
+  flex-basis: calc(
+    33.33% - 20px
+  ); /* Hier den gewünschten Abstand zwischen den Projekten anpassen */
   position: relative;
   align-items: center; /* Zentrierung horizontal */
   display: inline-block;
@@ -49,7 +52,25 @@
 .project:hover .project-details {
   opacity: 1;
 }
+.project:hover .translate-button {
+  opacity: 1;
+  pointer-events: auto;
+}
 
+.translate-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.translate-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .project-details h2,
 .project-details p,
 .project-details a {
@@ -62,6 +83,9 @@
   object-fit: contain; /* Das Bild im Behälter zentriert darstellen */
 }
 
-.smaydo{
+.smaydo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
 }

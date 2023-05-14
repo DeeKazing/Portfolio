@@ -8,9 +8,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CVComponent } from './cv/cv.component';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, ProjectsComponent, HomepageComponent],
+  declarations: [AppComponent, NavigationComponent, ProjectsComponent, HomepageComponent, CVComponent],
   imports: [BrowserModule, AppRoutingModule, MatTooltipModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

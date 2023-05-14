@@ -1,0 +1,31 @@
+.cv-container {
+    position: relative;
+    margin: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .cv-content {
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Versteckt die Standard-Scrollbar in Firefox */
+    -ms-overflow-style: none; /* Versteckt die Standard-Scrollbar in IE und Edge */
+  }
+  
+  .cv-content::-webkit-scrollbar {
+    display: none; /* Versteckt die Standard-Scrollbar in Chrome, Safari und Opera */
+  }
+
+  .language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

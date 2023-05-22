@@ -128,3 +128,14 @@ h2 {
 app-projects {
   margin-top: 100vh;
 }
+
+#techStackIcons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2%;
+  align-items: center;
+}
+.stackIcon {
+  height: 4rem;
+}

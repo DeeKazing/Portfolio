@@ -1,40 +1,65 @@
-<div class="container">
-  <div class="contact-form">
-    <h2>Contact</h2>
-    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          [(ngModel)]="formData.name"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          [(ngModel)]="formData.email"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          [(ngModel)]="formData.message"
-          required
-          rows="5"
-        ></textarea>
-      </div>
-      <button type="submit" [disabled]="!contactForm.form.valid">
-        Send Message
-      </button>
-    </form>
+<form (ngSubmit)="submitForm()" [formGroup]="contactForm" class="contact-form">
+  <img
+    class="info-icon"
+    src="../../assets/info.svg"
+    alt="Info"
+    [matTooltip]="infoText"
+    matTooltipPosition="after"
+    matTooltipClass="info-tooltip"
+  />
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" formControlName="name" required />
+    <div
+      *ngIf="
+        contactForm.get('name')?.invalid &&
+        (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)
+      "
+      class="error-message"
+    >
+      Bitte gib deinen Namen ein.
+    </div>
   </div>
-</div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      formControlName="email"
+      required
+    />
+    <div
+      *ngIf="
+        contactForm.get('email')?.invalid &&
+        (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)
+      "
+      class="error-message"
+    >
+      Bitte gib eine gültige E-Mail-Adresse ein.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      formControlName="message"
+      required
+    ></textarea>
+    <div
+      *ngIf="
+        contactForm.get('message')?.invalid &&
+        (contactForm.get('message')?.dirty ||
+          contactForm.get('message')?.touched)
+      "
+      class="error-message"
+    >
+      Bitte gib eine Nachricht ein.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
+</form>

@@ -10,12 +10,12 @@
   .cv-content {
     height: 100%;
     overflow-y: scroll;
-    scrollbar-width: none; /* Versteckt die Standard-Scrollbar in Firefox */
-    -ms-overflow-style: none; /* Versteckt die Standard-Scrollbar in IE und Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   
   .cv-content::-webkit-scrollbar {
-    display: none; /* Versteckt die Standard-Scrollbar in Chrome, Safari und Opera */
+    display: none;
   }
 
   .language-toggle {

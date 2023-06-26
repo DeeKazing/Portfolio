@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'cv', component: CVComponent },
   { path: 'contactMe', component: ContactMeComponent },
-  // { path: 'about', component: AboutComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

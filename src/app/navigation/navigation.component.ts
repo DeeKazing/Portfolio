@@ -11,7 +11,6 @@ export class NavigationComponent {
     const section = document.getElementsByTagName('ul')[0];
 
     section.addEventListener("mousemove", function(event) {
-      // Leite das Event an das Canvas weiter
       event.stopPropagation();
       canvas.dispatchEvent(new MouseEvent("mousemove", event));
     });

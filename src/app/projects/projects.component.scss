@@ -6,30 +6,26 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
-  overflow: auto; /* Scrollbar anzeigen, wenn Inhalt überläuft */
+  overflow: auto; 
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .portfolio h1 {
-  margin-bottom: 30px; /* Hier den gewünschten Abstand einstellen */
-  font-weight: bold; /* Text fett machen */
+  margin-bottom: 30px; 
+  font-weight: bold; 
 }
 
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Linke Ausrichtung der Projekte in der ersten Zeile */
+  justify-content: flex-start;
 }
 
 .project {
   flex-grow: 1;
-  flex-basis: calc(
-    33.33% - 20px
-  ); /* Hier den gewünschten Abstand zwischen den Projekten anpassen */
+  width: 33%;
   position: relative;
-  align-items: center; /* Zentrierung horizontal */
-  display: inline-block;
-  margin-bottom: 20px; /* Abstand zwischen den Projekten anpassen */
 }
 
 .project-details {
@@ -44,13 +40,12 @@
   transition: opacity 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
 
 .project:hover .project-details {
   opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .project:hover .translate-button {
   opacity: 1;
@@ -80,10 +75,10 @@
 .project img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* Das Bild im Behälter zentriert darstellen */
+  object-fit: contain; 
 }
 
-.smaydo {
+.white {
   display: flex;
   align-items: center;
   justify-content: center;
